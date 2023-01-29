@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".views.stimulation.StimulationFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/particle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/hello"
+        android:textColor="@color/colorSecondaryVariant" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hello"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/user_name"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="@color/colorSecondary" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfile"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_above="@id/stimulationContainer"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="-32dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user"
+        android:translationZ="1dp"
+        app:civ_border_color="@color/colorSecondary"
+        app:civ_border_width="2dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/stimulationContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/userName"
+        android:background="@drawable/left_curve"
+        android:backgroundTint="@color/litGray"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/curve_edges"
+                android:backgroundTint="@color/white"
+                android:padding="16dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/retirementText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/if_you_retire_at"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/retirementAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/retirementText"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/_67_years_old"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    app:textAllCaps="true" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/ic_chevron_left"
+                    app:backgroundTint="@color/darkGray"
+                    app:borderWidth="1dp"
+                    app:elevation="0dp"
+                    app:fabCustomSize="40dp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/ic_chevron_right"
+                    app:backgroundTint="@color/darkGray"
+                    app:borderWidth="1dp"
+                    app:elevation="0dp"
+                    app:fabCustomSize="40dp" />
+
+
+                <LinearLayout
+                    android:id="@+id/graphView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/retirementAge"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorSecondary"
+                    android:orientation="vertical" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/graphView"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/currentRetirementNest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$2,872"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/retirementSavings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Retirement Savings"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/yearlyContribution"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2%"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contributions"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/retirementStageList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/retirement_stage_item" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

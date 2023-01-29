@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "59598026588",
+    "project_id": "ezyretirements",
+    "storage_bucket": "ezyretirements.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59598026588:android:df98a52ebaf950e9eeb399",
+        "android_client_info": {
+          "package_name": "com.ezyretirement.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59598026588-p3v322hk1orlcgajj5ebheu06i2sftf4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC00lP91S6JwUPCsTBz5Mgxjr8a3kkE8IU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "59598026588-p3v322hk1orlcgajj5ebheu06i2sftf4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
