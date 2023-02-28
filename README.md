@@ -11,3 +11,10 @@ Simplifies the complex process of retirement planning Provides personalized reco
 Our team utilized Kotlin, a programming language that is widely used for building Android apps, to develop the user interface and overall functionality of the app. Kotlin offers a number of advantages over other programming languages, such as improved performance and a more concise syntax, which made it the ideal choice for our project.
 
 We also used Python, a powerful programming language known for its flexibility and ease of use, to develop the machine learning (ML) algorithms that drive the personalized recommendations and investment suggestions within the app.
+
+
+Credits:
+- Parth Shah
+- Krish Jain
+- Kyle Ho
+- HimranK Kamara
