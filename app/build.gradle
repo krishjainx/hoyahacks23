@@ -48,7 +48,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
     implementation 'com.github.vipulasri:timelineview:1.1.5'
 //    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
-    implementation "com.airbnb.android:lottie:4.2.0"
+    implementation "com.airbnb.android:lottie:4.2.2"
 
     //firebase
     implementation 'com.google.firebase:firebase-analytics:20.1.0'
